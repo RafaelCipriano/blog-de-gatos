@@ -1,0 +1,163 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Mulish', sans-serif;
+    font-size: 62.5%;
+    --dark-green: #065E7C;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+#app {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+}
+
+header {
+    background: var(--dark-green);
+}
+
+nav {
+    width: 100%;
+    max-width: 144rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.55rem;
+    padding: 1.2rem 2.8rem;
+    margin: auto;
+}
+
+main {
+    margin-bottom: 3.9rem;
+}
+
+form { flex: 1; }
+
+.input-wrapper {
+    display: flex;
+}
+
+.input-wrapper label {
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+.input-wrapper input {
+    padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+    font: 1.6rem 'Mulish', sans-serif;
+    border: none;
+    outline: none;
+    border-radius: .4rem;
+    background: rgba(255, 255, 255, 0.20);
+    flex: 1;
+}
+
+.input-wrapper input::placeholder {
+    color: white;
+}
+
+section {
+    display: grid;
+    gap: 3.1rem;
+}
+
+section, section > img {
+    width: 100%;
+    min-width: 32rem;
+    max-width: 80rem;
+}
+
+.container {
+    padding-left: 2.2rem;
+}
+
+.container h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    margin-bottom: .8rem;
+}
+
+.container-rate {
+    display: flex;
+    gap: 1.2rem;
+}
+
+button.rate-button {
+    border: none;
+    border-radius: 50%;
+    padding: 1.2rem;
+    background: var(--dark-green);
+}
+
+button.rate-button:nth-child(2) img {
+    transform: scaleX(-1) rotate(180deg) translateY(-3px);
+}
+
+.container-text p {
+    line-height: 2.5rem;
+    padding-inline: 2.2rem 2.6rem;
+}
+
+aside {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3.2rem;
+
+    padding-inline: 2.2rem 2.4rem;
+}
+
+a {
+    display: flex;
+    gap: 1.6rem;
+    color: black;
+    text-decoration: none;
+}
+
+a img {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+a .content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.content p {
+    font-size: 1.4rem;
+}
+
+footer p {
+    padding: 1.6rem;
+    color: white;
+    background: var(--dark-green);
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        margin: 4.4rem auto 3.9rem auto;
+        display: grid;
+        grid-template-columns: 1fr 38.2rem;
+        gap: 3.4rem;
+    }
+
+    main section {
+        justify-self: end;
+    }
+
+    aside {
+        padding: 0;
+    }
+}
